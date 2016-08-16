@@ -1,22 +1,55 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-	<head>
-		<meta charset="utf8">
-		<title>CSS3 Matching Game</title>
-		<link href="css/matchgame.css" rel="stylesheet">
-		<script src="js/jquery-3.1.0.min.js"></script>
-		<script src="js/matchgame.js"></script>
-	</head>
+<!DOCTYPE html>
+<html lang=en>
+<head>
+
+	
+	<meta charset=utf-8>
+	<title>CSS3 Matching Game</title>
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+	<link href="http://fonts.googleapis.com/css?family=Orbitron:400,700" rel="stylesheet" type="text/css" >
+	<link rel="stylesheet" href="css/matchgame.css" />
+			
+</head>
+<body>
 	<header>
 		<h1>CSS3 Matching Game</h1>
 	</header>
-	<section id="game">
-		<div id="cards">
+	
+	<div id="timer">
+		Elapsed time: <span id="elapsed-time">00:00</span>
+	</div>
+	<section id="game">		
+		<div id="cards">			
 			<div class="card">
 				<div class="face front"></div>
 				<div class="face back"></div>
+			</div> <!-- .card -->						
+		</div> <!-- #cards -->
+	</section> <!-- #game -->
+	
+	<section id="popup" class="hide">
+		<div id="popup-bg">
+		</div>
+		
+		<div id="popup-box">
+			<div class="ribbon hide">				
+				<div class="ribbon-body">
+					<span>New Record</span>
+				</div>			
+				<div class="triangle"></div>	
+			</div>		
+			<div id="popup-box-content">
+				<h1>You Won!</h1>				
+				<p>Your Score:</p>
+				<p><span class='score'>13</span></p>
+				
+				<p><small>Last Score: <span class='last-score'>20</span><br>
+				Saved on: <span class='saved-time'>13/4/2011 3:14pm</span></small></p>
 			</div>
 		</div>
 	</section>
-	
+
+<script src="js/jquery-1.6.min.js"></script>
+<script src="js/html5games.matchgame.js"></script>
+</body>
 </html>
